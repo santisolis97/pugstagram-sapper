@@ -11,12 +11,14 @@
   export let location;
   export let photo;
   export let postComment;
+  export let bookmark;
+  export let like;
   export let comments;
   export let avatar;
 
   let isModal = false;
-  let like = false;
-  let bookmark = false;
+  // let like = false;
+  // let bookmark = false;
 
   function handleClick() {
     isModal = !isModal;
@@ -24,9 +26,9 @@
   function handlelike() {
     like = !like;
     if (like) {
-      likeCount.update(n => n + 1);
+      likeCount.update((n) => n + 1);
     } else {
-      likeCount.update(n => n - 1);
+      likeCount.update((n) => n - 1);
     }
   }
 </script>
